@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/styles.css">
+    <script src="./js/script.js" type="module" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+        integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
+        crossorigin="anonymous" />
+    <title>Parcial Tema 4</title>
+</head>
+
+<body class="w-full font-sans bg-teal-100">
+    <header class="w-full h-15">
+        <a href="/">
+            <img src="image/potencia2.svg" alt="logo">
+    </a>
+
+        <nav class="w-full h-16 justify-around flex row lg:flex-row  sm:flex-col space-x-1">
+            <ul></ul>
+                <li  class="btn-link btn hover:zoom px-3 flex-none hover:bg-teal-500"><a href="#">Nosotros</a></li>
+                <li  class="btn-link btn hover:zoom px-3 flex-none hover:bg-teal-500"><a href="#">Anuncios</a></li>
+                <li  class="btn-link btn hover:zoom px-3 flex-none hover:bg-teal-500"><a href="#">Blog</a></li>
+                <li  class="btn-link btn hover:zoom px-3 flex-none hover:bg-teal-500"><a href="#">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section>
+        <h1 class="text-4xl font-sans text-center bg-gray-500">Administracion</h1>
+        <div id="img">
+
+        </div>
+    </section>
+
+    <section class="container " id="dataIn">
+        <form class="formulario" id="form">
+            <label for="titulo">Titulo </label>
+            <input type="text" 
+            name="titulo" 
+            id="titulo" 
+            placeholder="Ingrese Titulo" 
+            data-validation="text"
+                required>
+            <label for="descripcion">Descripcion</label>
+            <input type="text" 
+            name="descripcion" 
+            id="descripcion" 
+            placeholder="Ingrese Descripcion"   
+            data-validation="alphanumeric" 
+            required>
+            
+                <fieldset>
+                <p>Transaccion</p>
+                <label for="rdov">
+                    <input type="radio" 
+                    name="transaccion" 
+                    id="" 
+                    value="venta" 
+                    checked>
+                    Venta
+                </label>
+
+                <label for="rdoA">
+                    <input type="radio" 
+                    name="transaccion" 
+                    id="" 
+                    value="alquiler" 
+                    checked>
+                    Alquiler
+                </label>
+            </fieldset>
+
+
+
+            <label for="precio">Precio</label>
+            <input type="text" name="precio" id="precio" placeholder="Ingrese Precio" data-validation="number"
+                required>
+            <div id="puertas"> <!--MEJORAR ESTO ES MALISIMO-->
+                <label for="puertas"><img src="image/puertas.png" alt=""></label>
+                <input type="number" name="puertas" id="puertas" min="2" max="5" placeholder="Puertas" required>
+                <label for="km"><img src="image/km.png" alt=""></label>
+                <input type="text" name="km" id="km" placeholder="kilometros" required>
+                <label for="potencia"><img src="image/potencia.png" alt=""></label>
+                <input type="number" name="potencia" id="potencia" min="100" max="180" placeholder="Potencia">
+            </div>
+
+
+            <div class="flex justify-around">
+                <button id="btnAdd" type="submit" class="btn hover:zoom">
+                    <i class="fa  fa-floppy-o fa-2x"></i>
+                    Guardar
+                </button>
+                <button id="btnEdit" type="submit" class="btn hover:zoom hideBtn">Editar</button>
+                <button id="btnCancel" class=" btn hover:zoom hideBtn">Cancelar</button>
+                <button id="btnDelete" class="btn hover:zoom hideBtn">Eliminar</button>
+            </div>
+        </form>
+    </section>
+
+    <section class="container">
+        <div id="divTabla">
+
+        </div>
+
+    </section>
+
+    <footer>
+        <a href="/">
+            <img src="image/potencia2.svg" alt="logo">
+   
+    </a>
+        <nav class="flex justify-between space-x-5"> 
+            <ul>
+                <li class="hover:zoom"><i><i class="fa fa-facebook-official" aria-hidden="true"></i>Cars Sales</i> 
+                </li>
+                    <li class="hover:zoom"><i><i class="fa fa-instagram" aria-hidden="true"></i></i> @CarsSales
+                    </li>
+                    <li class="hover:zoom"><i><i class="fa fa-twitter" aria-hidden="true"></i></i> @CarsSales
+                          
+            </ul>
+        </nav>
+            </footer>
+
+</body>
+
+</html>

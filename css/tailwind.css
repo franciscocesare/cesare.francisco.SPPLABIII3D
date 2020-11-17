@@ -1,0 +1,175 @@
+@tailwind base;
+
+@tailwind components;
+
+@variants hover{
+    .zoom{
+        transform: scale(2);
+        
+    }
+}
+
+*{
+    margin: 0;
+    /*box-sizing: content-box;*/
+    box-sizing: border-box;
+    list-style: none;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; /*NO ME GUISTA*/
+
+}
+
+header, footer{
+    
+    display: flex;
+    justify-content: justify-around;
+    padding: 1vw;
+    background-repeat: no-repeat;
+    background-color: rgb(227, 231, 230);
+
+
+}
+header{
+    color: red;
+    background-size: cover;
+    position: sticky; /* queda clavado en el top 0*/
+    top: 0;
+}
+footer{
+    margin-top: 20%;
+}
+
+footer img{
+    width: 50px;
+
+ }
+
+header img{
+    width: 130px;
+
+ }
+
+nav ul{
+    display: flex;
+    list-style-type: none;
+    padding-left: 0;
+}
+nav li{
+    margin: 10px 20px;
+    flex: content;
+}
+nav a{
+    color: black;
+    text-decoration: none;
+    padding: 10px 20px;
+    
+}
+
+#img{
+        width: 100%;
+        height: 200px;
+        background-image: url(../image/auto-de-frente.jpeg);
+        /*background-repeat: no-repeat;*/
+        background-position: center;
+        background-size: cover;
+
+}
+
+/*   FORMULARIO */
+
+.container{
+    display: flex;
+    justify-content: center;
+}
+
+.formulario{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    margin-top: 20px;
+    width: 55vw;
+    border: 1px solid rgb(124, 124, 124);
+    border-radius: 16px;
+    box-shadow: 0px 0px 10px gray; 
+    background-color: whitesmoke;
+   
+}
+.formulario #puertas{
+    display: flex;
+}
+#puertas img{
+    width: 100px;
+}
+
+
+form input[type="text"],
+form input[type="number"],
+form input[type="email"],
+form input[type="date"],
+select,
+fieldset{
+    margin-left: 15px;
+    padding: 5px;
+    border-radius: 2px;
+    border-color: #ccc;
+    border: 1px solid #ccc;
+    width: 90%;
+    margin-bottom: 10px;
+    margin-top: 5px;
+    box-shadow: 0px 0px 2px gray; 
+}
+label{
+    margin-left: 15px;
+}
+
+
+.btn{
+    @apply  rounded shadow-xl py-1 px-4 block border-black bg-teal-300 text-base flex-row;
+ }
+ .btn:hover{
+ @apply shadow-none text-black;
+ }
+ 
+
+.hideBtn{
+    display: none;
+}
+
+table{
+    border-collapse: collapse;
+    margin: 3vw;
+    border-radius: 16px;
+}
+table, th,td{
+    border: 2px solid rgba(0, 0, 0, 0.575);
+    padding: 1vw;
+    border-radius: 10px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; /*NO ME GUISTA*/
+
+
+}
+th{
+    background-color: rgb(105, 171, 173);
+    font-size: 20px;
+}
+
+tr:nth-of-type(odd){
+    background-color: rgba(92, 65, 122, 0.192);
+}
+tr:hover{
+    background-color: rgba(55, 54, 97, 0.473);
+    cursor: pointer;
+}
+
+@media (max-width: 800px){
+    header, footer{
+    flex-direction: column;
+    justify-content: center;
+    }
+    header img{
+        align-self: center;
+    }
+}
+
+
+
+@tailwind utilities;
