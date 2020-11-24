@@ -36,24 +36,46 @@ export function getId() {
     return JSON.parse(localStorage.getItem('nextId')) || 100;
 }*/
 
-export function alta(frm, proximoId) {
-    //pasarle los valores obtenidos en el form
-    const newCar = new PublicacionAuto(
-        proximoId,
-        frm.titulo.value,
-        frm.descripcion.value,
-        frm.precio.value,
-        frm.transaccion.value,
-        frm.puertas.value,
-        frm.km.value,
-        frm.potencia.value
-    )
-    return newCar;
-}
+export async function alta(frm) {
 
-export function save(listCars, proximoId = null) {
-    localStorage.setItem('autos', JSON.stringify(listCars));
-    localStorage.setItem('nextId', proximoId || getId());
+    //pasarle los valores obtenidos en el form
+    const newCar = {
+        "titulo": frm.titulo.value,
+        "descripcion": frm.descripcion.value,
+        "precio": parseInt(frm.precio.value),
+        "transaccion": frm.transaccion.value,
+        "puertas": frm.puertas.value,
+        "km": frm.km.value,
+        "potencia": frm.potencia.value
+    }
+            const config = {
+                method: "POST",
+                headers: {
+                  "Content-type": "application/json;charset=utf-8",
+                },
+                body: JSON.stringify(newCar),
+              };
+      return fetch(URL, config)
+        .then((res)=> {
+            if (!res) return Promise.reject(res);
+            return res.json();
+        })
+
+        .then((addCar)=> {
+            console.log("alta exitosa", addCar);
+        })
+        .catch(err =>{
+            console.log(err.status);
+        })
+
+        .finally(()=> {
+            refreshList();
+        })
+    }
+    
+    export function save(listCars, proximoId = null) {
+        localStorage.setItem('autos', JSON.stringify(listCars));
+        localStorage.setItem('nextId', proximoId || getId());
 }
 
 export function refreshList(listCars) {

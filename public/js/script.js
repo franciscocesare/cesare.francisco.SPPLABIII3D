@@ -40,7 +40,7 @@ async function inicializarManejadores(){
     frm.addEventListener('submit', async (e) =>{
         e.preventDefault();
 
-        let alta = await alta(frm)
+        alta = await alta(frm)  //si alta la declaro con let me da error
 
         listCars = await getCars();
         

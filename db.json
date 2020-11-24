@@ -59,6 +59,16 @@
       "puertas": "2",
       "km": "30000",
       "potencia": "100"
+    },
+    {
+      "titulo": "dadada",
+      "descripcion": "ssseeesdssee",
+      "precio": 135,
+      "transaccion": "alquiler",
+      "puertas": "2",
+      "km": "2",
+      "potencia": "100",
+      "id": 117
     }
   ]
 }
