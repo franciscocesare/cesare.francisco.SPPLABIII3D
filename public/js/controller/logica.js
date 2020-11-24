@@ -5,12 +5,36 @@ import {
     clean
 } from '../entidades/tabla.js';
 
-export function getCars() {
-    return JSON.parse(localStorage.getItem('autos')) || [];
+const URL = "http://localhost:4000/autos/";
+
+export const getCars = async() => {
+
+    try {
+        let res = await fetch (URL)
+
+        if(!res.ok){
+            let msj = res.statusText || "error en la carga";
+
+            throw {status: res.status, statusText: msj};
+        }
+
+        let data = await res.json();
+       return data;// console.log (data);  ///ta bien return??los autos los traigo!
+        
+    } catch (err) {
+        console.error(err)
+        
+    }finally{
+          clean();
+    }
+   
 }
+
+
+/*
 export function getId() {
     return JSON.parse(localStorage.getItem('nextId')) || 100;
-}
+}*/
 
 export function alta(frm, proximoId) {
     //pasarle los valores obtenidos en el form
@@ -44,9 +68,9 @@ export function refreshList(listCars) {
 }
 
 
-export function searchCar(id) {
+export async function searchCar(id) {
 
-    let lista = getCars();
+    let lista = await getCars();
     lista.forEach(element => {
         if (element['id'] == id) {
             let frm = document.forms[0];

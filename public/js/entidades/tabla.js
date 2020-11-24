@@ -6,7 +6,7 @@ import {
 
 export let idSelected;
 
-export function crearTabla(lista){
+export const crearTabla = (lista) => {
 
     const tabla = document.createElement('table');
     tabla.appendChild(crearCabecera(lista[0]));

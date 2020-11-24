@@ -1,7 +1,7 @@
 
 import {
     getCars,
-    getId,
+   // getId,
     refreshList,
     alta,
     save
@@ -17,35 +17,37 @@ import {
 let frm;
 let divTabla;
 let listCars;
-let proximoId;
+//let proximoId;
 let btnCancelar;
 let btnDelete;
 let btnEdit;
 
 window.addEventListener('load', inicializarManejadores);
 
-function inicializarManejadores(){
+async function inicializarManejadores(){
 
-    listCars =  getCars();
-    proximoId = getId();
+    listCars =  await getCars();
+    //proximoId = getId();
 
     divTabla = document.getElementById('divTabla');
 
     refreshList(listCars);
-    console.log(listCars);
+
+    //console.log(listCars);
+    
     frm = document.forms[0];
-    frm.addEventListener('submit', e =>{
+
+    frm.addEventListener('submit', async (e) =>{
         e.preventDefault();
 
-        
-        const newCar = alta(frm, proximoId);
+        let alta = await alta(frm)
 
-        if(newCar){
-            listCars.push(newCar);
-            proximoId++;
-            save(listCars, proximoId);
-            refreshList(listCars);
-        }
+        listCars = await getCars();
+        
+        refreshList(listCars);
+       // const newCar = alta(frm, proximoId);
+
+        
     });
 }
 
