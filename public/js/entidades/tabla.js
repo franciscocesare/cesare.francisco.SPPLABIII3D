@@ -57,7 +57,7 @@ function crearCuerpo(lista){
     return tbody;
 }
 
-// esto va en logica y se exporta aca
+
 let flag = false;
 function agregarManejadorTR(tr){
     if(tr){

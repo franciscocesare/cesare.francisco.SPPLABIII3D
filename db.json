@@ -1,0 +1,64 @@
+{
+  "autos": [
+    {
+      "id": 108,
+      "titulo": "citroen c3",
+      "descripcion": "citroen c3, inmaculado",
+      "precio": "123123",
+      "transaccion": "alquiler",
+      "puertas": "2",
+      "km": "130000",
+      "potencia": "100"
+    },
+    {
+      "id": 111,
+      "titulo": "peugeot partner",
+      "descripcion": "peugeot partner 2008 full full",
+      "precio": "280.000",
+      "transaccion": "venta",
+      "puertas": "5",
+      "km": "130000",
+      "potencia": "100"
+    },
+    {
+      "id": 112,
+      "titulo": "peugeot partner",
+      "descripcion": "peugeot partner 2008 full full",
+      "precio": "280.000",
+      "transaccion": "venta",
+      "puertas": "5",
+      "km": "130000",
+      "potencia": "100"
+    },
+    {
+      "id": 114,
+      "titulo": "dadada",
+      "descripcion": "tyuty",
+      "precio": "500000",
+      "transaccion": "venta",
+      "puertas": "2",
+      "km": "500000",
+      "potencia": "100"
+    },
+    {
+      "id": 115,
+      "titulo": "vw bora",
+      "descripcion": "vw bora 2008, full, airbag",
+      "precio": "650000",
+      "transaccion": "venta",
+      "puertas": "4",
+      "km": "130000",
+      "potencia": "150"
+    },
+    {
+      "id": 116,
+      "titulo": "ford taunus",
+      "descripcion": "ford taunus modelo 1983",
+      "precio": "100000",
+      "transaccion": "venta",
+      "puertas": "2",
+      "km": "30000",
+      "potencia": "100"
+    }
+  ]
+}

@@ -34,10 +34,10 @@ function inicializarManejadores(){
     refreshList(listCars);
     console.log(listCars);
     frm = document.forms[0];
-    frm.addEventListener('submit', e =>{ // referencia al formulario
+    frm.addEventListener('submit', e =>{
         e.preventDefault();
 
-        //alta de persona  metodo de la clase persona
+        
         const newCar = alta(frm, proximoId);
 
         if(newCar){
@@ -59,8 +59,7 @@ btnCancelar.addEventListener('click', e =>{
 btnDelete = document.getElementById('btnDelete');
 btnDelete.addEventListener('click', e =>{
     e.preventDefault();
-    //Eliminar de la lista y actualizar
-  //  console.log(idSeleccionado);
+  
     
     listCars = listCars.filter(auto => auto['id'] != idSelected);
 
@@ -72,8 +71,7 @@ btnDelete.addEventListener('click', e =>{
 btnEdit = document.getElementById('btnEdit');
 btnEdit.addEventListener('click', e =>{
     e.preventDefault();
-    //Eliminar de la lista y actualizar
-   // console.log(idSeleccionado);
+ 
 
     let auto = listCars.find(element => element['id'] == idSelected);
     //console.log(auto);
