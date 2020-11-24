@@ -73,20 +73,22 @@
                 </label>
             </fieldset>
 
-
-
             <label for="precio">Precio</label>
             <input type="text" name="precio" id="precio" placeholder="Ingrese Precio" data-validation="number"
                 required>
-            <div id="puertas"> <!--MEJORAR ESTO ES MALISIMO-->
+
+            <div id="puertas"> 
                 <label for="puertas"><img src="image/puertas.png" alt=""></label>
                 <input type="number" name="puertas" id="puertas" min="2" max="5" placeholder="Puertas" required>
                 <label for="km"><img src="image/km.png" alt=""></label>
                 <input type="text" name="km" id="km" placeholder="kilometros" required>
                 <label for="potencia"><img src="image/potencia.png" alt=""></label>
                 <input type="number" name="potencia" id="potencia" min="100" max="180" placeholder="Potencia">
-            </div>
 
+            </div >
+            <div>
+
+            </div>
 
             <div class="flex justify-around">
                 <button id="btnAdd" type="submit" class="btn hover:zoom">
@@ -100,13 +102,20 @@
         </form>
     </section>
 
-    <section class="container">
-        <div id="divTabla">
+    <section class="container justify-around">
+        <div>
+            <select class="justify-items-center" name="" id="selectTransaction">
+                <option value="">Seleccionar</option>
+                <option value="">Venta</option>
+                <option value="">Alquiler</option>
+            </select>
+
+        </div>
+        <div class="justify-items-center" id="divTabla">
 
         </div>
 
     </section>
-
     <footer>
         <a href="/">
             <img src="image/potencia2.svg" alt="logo">
